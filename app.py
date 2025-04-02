@@ -1,19 +1,8 @@
-from logging import CRITICAL, ERROR, WARNING, INFO, DEBUG #constantes
-from logging import basicConfig
-from logging import critical, error, warning, info, debug #funções
-from logging import FileHandler, StreamHandler
+from logging.config import dictConfig
+from logging import critical, error, warning, info, debug, getLogger #funções
+from config import logging_config
 
-file_handler = FileHandler('log/logs.log', 'a')
-file_handler.setLevel(WARNING)
+dictConfig(logging_config)
 
-stream_handler = StreamHandler()
-# stream_handler.setLevel(DEBUG)
-
-basicConfig(
-    level=DEBUG,
-    format='%(levelname)s : %(asctime)s : %(message)s',
-    handlers=[stream_handler, file_handler]
-)
-
-debug("Error, afs!!!")
-warning("Warning, afs!!!")
+debug("Error, cartao!!!")
+warning("Warning, cartao!!!")

@@ -1,5 +1,5 @@
 import logging
-from filters import Filtro
+from log.config.filters import Filtro
 
 logging_config = dict(
     version = 1,
@@ -17,7 +17,7 @@ logging_config = dict(
                 'level': logging.DEBUG,
                 'filters': ['leaked_password']},
         'fh': {'class': 'logging.FileHandler',
-                'filename': 'log/logs.log',
+                'filename': 'log/var/logs.log',
                 'mode': 'a',
                 'formatter': 'f',
                 'level': logging.WARNING,

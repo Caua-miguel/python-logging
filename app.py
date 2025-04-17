@@ -1,10 +1,7 @@
 import logging.config
-import logging.config
 import logging.handlers
 import pathlib
 import json
-
-logger = logging.getLogger("my_app")
 
 def setup_logging():
     config_file = pathlib.Path("config.json")
@@ -14,6 +11,9 @@ def setup_logging():
 
 def main():
     setup_logging()
+
+    logger = logging.getLogger("my_app")
+
     logger.debug("debug message")
     logger.info("info message")
     logger.warning("warning message")

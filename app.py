@@ -14,7 +14,7 @@ def main():
 
     logger = logging.getLogger("my_app")
 
-    logger.debug("debug message")
+    logger.debug("debug message", extra={"x": "hello"})
     logger.info("info message")
     logger.warning("warning message")
     logger.error("error message")

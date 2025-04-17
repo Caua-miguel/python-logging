@@ -3,19 +3,20 @@
     "disable_existing_loggers": false,
     "formatters": {
         "simple": {
-            "format": "%(levelname)s: %(message)s"
-        }
-    },
-    "json": {
-        "()": "mylogger.JSONFormatter",
-        "fmt_keys": {
-            "level": "levelname",
-            "timestamp": "timestamp",
-            "logger": "name",
-            "module": "module",
-            "function": "funcName",
-            "line": "lineno",
-            "thread_name": "threadName"
+            "format": "%(levelname)s: %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        },
+        "json": {
+            "()": "mylogger.MyJSONFormatter",
+            "fmt_keys": {
+                "level": "levelname",
+                "timestamp": "timestamp",
+                "logger": "name",
+                "module": "module",
+                "function": "funcName",
+                "line": "lineno",
+                "thread_name": "threadName"
+            }
         }
     },
     "handlers": {
@@ -29,7 +30,7 @@
             "class": "logging.handlers.RotatingFileHandler",
             "level": "DEBUG",
             "formatter": "json",
-            "filename": "log/my_app.log",
+            "filename": "log/my_app.log.jsonl",
             "maxBytes": 10000,
             "backupCount": 3
         }

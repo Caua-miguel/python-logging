@@ -20,7 +20,7 @@
         }
     },
     "handlers": {
-        "stderr": {
+        "console": {
             "class": "logging.StreamHandler",
             "level": "WARNING",
             "formatter": "simple",
@@ -35,10 +35,10 @@
             "backupCount": 3
         },
         "queue_handler": {
-            "class": "logging.handlers.QueueHandler",
+            "()": "queue_logging.QueueListenerHandler",
             "handlers": [
-                "stderr", 
-                "file"
+                "cfg://handlers.console", 
+                "cfg://handlers.file"
             ],
             "respect_handler_level": true
         }

@@ -1,4 +1,4 @@
-import datetime as dt
+import datetime
 import json
 import logging
 from typing_extensions import override
@@ -23,9 +23,9 @@ class MyJSONFormatter(logging.Formatter):
     def _prepare_log_dict(self, record: logging.LogRecord):
         always_fields = {
             "message": record.getMessage(),
-            "timestamp": dt.datetime.fromtimestamp(
-                record.created, tz= dt.timezone.utc
-            ).isoformat(),
+            "timestamp": datetime.datetime.fromtimestamp(
+                record.created, tz= datetime.timezone(datetime.timedelta(hours=-3))
+            ).isoformat("T" ,"seconds"),
         }
         if record.exc_info is not None:
             always_fields['exc_info'] = self.formatException(record.exc_info)

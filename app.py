@@ -4,7 +4,7 @@ import pathlib
 import json
 
 def setup_logging():
-    config_file = pathlib.Path("config.json")
+    config_file = pathlib.Path("./log/config/config.json")
     with open(config_file) as f_in:
         config = json.load(f_in)
     logging.config.dictConfig(config)

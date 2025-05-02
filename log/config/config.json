@@ -7,7 +7,7 @@
             "datefmt": "%Y-%m-%dT%H:%M:%S%z"
         },
         "json": {
-            "()": "mylogger.MyJSONFormatter",
+            "()": "log.config.mylogger.MyJSONFormatter",
             "fmt_keys": {
                 "level": "levelname",
                 "timestamp": "timestamp",
@@ -35,7 +35,7 @@
             "backupCount": 3
         },
         "queue_handler": {
-            "()": "queue_logging.QueueListenerHandler",
+            "()": "log.config.queue_logging.QueueListenerHandler",
             "handlers": [
                 "cfg://handlers.console", 
                 "cfg://handlers.file"

@@ -3,7 +3,7 @@
 Projeto para estudar as configurações de logging no python. Próximo passo vai ser criar uma lib minha com essa configuração para que ela funcione em qualquer projeto. Mas esse caso, ao rodar o programa você
 vai gerar alguns logs, eles serão exibidos em json e vai ser criado um arquivo extra sempre que o execeder o limite de 10 kilobytes no arquivo principal.
 
-# Requisitos
+## Requisitos
 
 - python 3.11.9
 

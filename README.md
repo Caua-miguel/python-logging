@@ -17,6 +17,6 @@ Isso vai gerar alguns logs no terminal e gravar eles no arquivo `log/my_app.log.
 
 ## Modificações
 
-Caso queira testar outras configurações você pode editar o arquivo `log/config/config.json`.
+Caso queira testar outras configurações você pode editar o arquivo `log/config/config.json`
 
-Para retirar informações dos logs você pode adicionar as chaves do construtor `logging.LogRecord` dentro da constante `LOG_RECORD_BUILTIN_ATTRS`.
+Para retirar informações dos logs você pode adicionar as chaves do construtor `logging.LogRecord` dentro da constante `LOG_RECORD_BUILTIN_ATTRS`

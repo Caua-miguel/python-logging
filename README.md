@@ -1,7 +1,12 @@
 # python-logging
 
-Projeto para estudar as configurações de logging no python. Próximo passo vai ser criar uma lib minha com essa configuração para que ela funcione em qualquer projeto. Mas esse caso, ao rodar o programa você
-vai gerar alguns logs, eles serão exibidos em json e vai ser criado um arquivo extra sempre que o execeder o limite de 10 kilobytes no arquivo principal.
+Projeto para estudar as configurações de logging no python. Próximo passo vai ser criar uma lib minha com essa configuração para que ela funcione em qualquer projeto, apenas para estudar como fazer libs, endendo que seria pouco util uma lib com minhas configurações de log. Mas nesse projeto, ao rodar o programa você vai gerar alguns logs, eles serão exibidos em json e vai ser criado um arquivo extra sempre que o execeder o limite de 10 kilobytes no arquivo principal.
+
+O projeto em si usa as configurações do artigo: 
+
+https://medium.com/@rob-blackbourn/how-to-use-python-logging-queuehandler-with-dictconfig-1e8b1284e27a
+
+Eu apenas repliquei e estou estudando essas configurações para implementar em outros projetos.
 
 ## Requisitos
 

@@ -1,6 +1,7 @@
 import datetime
 import json
 import logging
+import threading
 from typing_extensions import override
 
 LOG_RECORD_BUILTIN_ATTRS = {}
@@ -46,6 +47,7 @@ class MyJSONFormatter(logging.Formatter):
             if key not in LOG_RECORD_BUILTIN_ATTRS:
                 message[key] = val
 
+        print(f"[Fila] Enfileirando: {record.getMessage()} (thread: {threading.current_thread().name})")
         return message
 
 class NonErrorFilter(logging.Filter):

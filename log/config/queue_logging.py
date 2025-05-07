@@ -24,7 +24,7 @@ def _resolve_queue(q):
         for name, value in props.items():
             setattr(result, name, value)
 
-    q['__resolved_value__'] == result
+    q['__resolved_value__'] = result
     return result
 
 class QueueListenerHandler(QueueHandler):

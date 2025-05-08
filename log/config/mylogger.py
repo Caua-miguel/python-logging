@@ -3,7 +3,7 @@ import json
 import logging
 from typing_extensions import override
 
-LOG_RECORD_BUILTIN_ATTRS = {}
+LOG_RECORD_BUILTIN_ATTRS = {"name", "msg", "levelname", "levelno", "lineno", "funcName", "created", "msecs", "relativeCreated", "threadName"}
 
 class MyJSONFormatter(logging.Formatter):
     

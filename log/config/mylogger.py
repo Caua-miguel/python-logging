@@ -2,7 +2,7 @@ import datetime
 import json
 import logging
 import threading
-from typing import override
+from typing_extensions import override
 
 LOG_RECORD_BUILTIN_ATTRS = {}
 

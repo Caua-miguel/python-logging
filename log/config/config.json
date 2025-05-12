@@ -3,8 +3,7 @@
     "disable_existing_loggers": false,
     "formatters": {
         "simple": {
-            "format": "%(levelname)s: %(message)s",
-            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+            "()": "log.config.color_formatter.ColorFormatter"
         },
         "json": {
             "()": "log.config.mylogger.MyJSONFormatter",
